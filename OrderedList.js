@@ -75,6 +75,7 @@ class OrderedList {
         if(!this.list.length) return false;
         let id = this.criterion(e);
         let pos = this._find(id);
+        pos = ( pos == this.list.length )? pos - 1 : pos;
         return this.list[pos];
     }
     remove(e){

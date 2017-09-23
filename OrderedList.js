@@ -72,6 +72,7 @@ class OrderedList {
         return cursor;
     }
     get(e){
+        if(!this.list.length) return false;
         let id = this.criterion(e);
         let pos = this._find(id);
         return this.list[pos];

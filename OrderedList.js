@@ -85,7 +85,7 @@ class OrderedList {
         throw "not found";
     }
     getRange(){
-        return[this.criterion(this.list[0]),this.criterion(this.list[0])];
+        return[this.criterion(this.list[0]),this.criterion(this.list[this.list.length-1])];
     }
 }
 class OrderedFunctionList extends OrderedList{

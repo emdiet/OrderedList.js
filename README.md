@@ -2,9 +2,11 @@
 
 Provides a list that keeps its objects in order.
 
+Could also be called a sorted array.
+
 It does not allow duplicates.
 
-advanced version: [OrderedFunctionList.js](#OrderedFunctionList.js)
+advanced version: [OrderedFunctionList.js](#orderedfunctionListjs)
 
 ## Instantiation
 
@@ -88,7 +90,7 @@ distance = (a,b)=> Math.abs(b-a),
 func = (idx, size, locus)=>(idx/size)-0.5+locus
 ```
 
-```max, locus, criterion, distance``` are the same as in [OrderedList.js](#OrderedList.js)
+```max, locus, criterion, distance``` are mostly the same as in [OrderedList](#arguments)
 
  * ```max``` max number of elements in list
 
@@ -116,6 +118,26 @@ now the algorithm will sort by ID
         (idx, len) => Math.pow((idx/len-0.5)*2, 4)
      )
  ```
+
+### Methods
+
+same as in [OrderedList](#methods)
+
+* ```add(object)``` self explanatory.
+
+* ```get(object)``` gets the desired object with the same key. example:
+
+```js
+    ol = new OrderedList(256, 0, e => e.id)
+    ol.add({data: data, id: 123});
+
+    console.log(
+        ol.get({id: 123})
+    );
+    //{data: data, id: 123}
+```
+
+ * ```remove(object)``` removes the object from the list, and returns it.
 
 ### Fields
 
